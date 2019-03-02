@@ -6,7 +6,7 @@ import java.util.Map;
 public class Isomo {
 
 
-    public  boolean isIsomorphicBoolean(String input1, String input2) {
+    private  boolean isIsomorphic(String input1, String input2) {
         char[] chars1 = input1.toCharArray();
         char[] chars2 = input2.toCharArray();
         List<Character> temp;
@@ -29,8 +29,8 @@ public class Isomo {
     }
 
 
-    public  boolean allBoolean(String input1, String input2) {
-        if( isIsomorphicBoolean(input1,input2) && isIsomorphicBoolean(input2,input1) ){
+    public  boolean isIsomorphicTwoDirection(String input1, String input2) {
+        if( isIsomorphic(input1,input2) && isIsomorphic(input2,input1) ){
             return true;
         }
         return false;

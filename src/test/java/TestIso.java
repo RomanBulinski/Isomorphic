@@ -12,7 +12,7 @@ public class TestIso {
         Isomo isomo = new Isomo();
         String word1 = "abb";
         String word2 = "xss";
-        assertTrue( isomo.allBoolean( word1, word2));
+        assertTrue( isomo.isIsomorphicTwoDirection( word1, word2));
     }
 
 
@@ -22,7 +22,7 @@ public class TestIso {
         Isomo isomo = new Isomo();
         String word1 = "abbr";
         String word2 = "xsss";
-        assertFalse( isomo.allBoolean( word1, word2));
+        assertFalse( isomo.isIsomorphicTwoDirection( word1, word2));
     }
 
 }
