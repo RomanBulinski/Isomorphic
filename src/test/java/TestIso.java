@@ -25,4 +25,16 @@ public class TestIso {
         assertFalse( isomo.isIsomorphicTwoDirection( word1, word2));
     }
 
+
+    @Test
+    public void  testisomorphicTrue2(){
+
+        Isomo isomo = new Isomo();
+        String word1 = "abbruu";
+        String word2 = "xsshoo";
+        assertTrue( isomo.isIsomorphicTwoDirection( word1, word2));
+    }
+
+
+
 }

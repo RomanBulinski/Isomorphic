@@ -5,24 +5,23 @@ import java.util.Map;
 
 public class Isomo {
 
-
     private  boolean isIsomorphic(String input1, String input2) {
         char[] chars1 = input1.toCharArray();
         char[] chars2 = input2.toCharArray();
-        List<Character> temp;
-        Map<Character, List<Character>> checklist = new HashMap<>();
+        List<Character> tempArraylist;
+        Map<Character, List<Character>> checkMap = new HashMap<>();
         for (int i = 0; i < chars1.length; i++) {
-            if (checklist.keySet().contains(chars1[i])) {
-                if (checklist.get(chars1[i]).contains(chars2[i])) {
+            if (checkMap.keySet().contains(chars1[i])) {
+                if (checkMap.get(chars1[i]).contains(chars2[i])) {
                     continue;
                 } else {
-                    checklist.get(chars1[i]).add(chars2[i]);
+                    checkMap.get(chars1[i]).add(chars2[i]);
                     return false;
                 }
             } else {
-                temp = new ArrayList<>();
-                temp.add(chars2[i]);
-                checklist.put(chars1[i], temp);
+                tempArraylist = new ArrayList<>();
+                tempArraylist.add(chars2[i]);
+                checkMap.put(chars1[i], tempArraylist);
             }
         }
         return true;
